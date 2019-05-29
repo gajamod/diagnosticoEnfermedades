@@ -17,7 +17,11 @@ const matsintomas=[];
  matsintomas[9]=[0.15,0.16,0.2,0,0,0,0,0.05,0,0,0,0,0.25,0,0];
 
 
-
+function agregarOpcion(id){
+    for (var k in enfermedades) {
+         $('#'+id).append('<option value="'+k+'" class="val">'+enfermedades[k]['nombre']+'</option>')
+    }
+}
 
 function compare(array1,array2){
     //const arr1= [5,5,6];
@@ -58,35 +62,35 @@ function indexOfMax(arr) {
 
 function compararUno(){
 
-    var aa = document.getElementById ("generoPaciente");
+    var aa = document.getElementById ("sintom[0]");
     var genero = aa.options[aa.selectedIndex].value;
-    var bb = document.getElementById ("edadPaciente");
+    var bb = document.getElementById ("sintom[1]");
     var edad = bb.options[bb.selectedIndex].value;
-    var cc = document.getElementById ("pesoPaciente");
+    var cc = document.getElementById ("sintom[2]");
     var peso = cc.options[cc.selectedIndex].value;
-    var a = document.getElementById ("nivelColesterol");
+    var a = document.getElementById ("sintom[3]");
     var colesterol = a.options[a.selectedIndex].value;
-    var b = document.getElementById ("nivelAcido");
+    var b = document.getElementById ("sintom[4]");
     var acido = b.options[b.selectedIndex].value;
-    var c = document.getElementById ("nivelTrigliceridos");
+    var c = document.getElementById ("sintom[5]");
     var trigliceridos = c.options[c.selectedIndex].value;
-    var d = document.getElementById ("nivelPresionSistolica");
+    var d = document.getElementById ("sintom[6]");
     var presionSis = d.options[d.selectedIndex].value;
-    var e = document.getElementById ("nivelPresionDiastolica");
+    var e = document.getElementById ("sintom[7]");
     var presionDias = e.options[e.selectedIndex].value;
-    var f = document.getElementById ("nivelEstres");
+    var f = document.getElementById ("sintom[8]");
     var estres = f.options[f.selectedIndex].value;
-    var g = document.getElementById ("nivelDesordenesAlimenticios");
+    var g = document.getElementById ("sintom[9]");
     var desordenAlimenticio = g.options[g.selectedIndex].value;
-    var h = document.getElementById ("nivelConsumoSal");
+    var h = document.getElementById ("sintom[10]");
     var sal = h.options[h.selectedIndex].value;
-    var i = document.getElementById ("nivelFumar");
+    var i = document.getElementById ("sintom[11]");
     var fumar = i.options[i.selectedIndex].value;
-    var j = document.getElementById ("nivelDeportes");
+    var j = document.getElementById ("sintom[12]");
     var deportes = j.options[j.selectedIndex].value;
-    var k = document.getElementById ("nivelAlcohol");
+    var k = document.getElementById ("sintom[13]");
     var alcohol = k.options[k.selectedIndex].value;
-    var l = document.getElementById ("nivelMolestias");
+    var l = document.getElementById ("sintom[14]");
     var molestias = l.options[l.selectedIndex].value;
     var lol = document.getElementById ("enfermedadComparar");
     var enfermedadseleccionada = lol.options[lol.selectedIndex].value;

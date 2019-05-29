@@ -313,29 +313,19 @@
 
                                      
 
-
+                                        
+                                        
                                         <h5 class="casos">Enfermedad que se quiere comparar</h5>
-                                        <div class="check">
-                                        <input class="che1" type="checkbox" id="arrar1" name="gender" value="6.7">Tromboembolismo pulmonar
-                                        <br>
-                                        <input class="che2" type="checkbox" id="arrar2" name="gender" value="6.55">Sindrome de miocardio
-                                        <br>
-                                        <input class="che3" type="checkbox" id="arrar3" name="gender" value="6.75">Cardiopatía isquémica
-                                        <br>
-                                        <input class="che4" type="checkbox" id="arrar4" name="gender" value="5.8">Amiloidosis
-                                        <br>
-                                        <input class="che5" type="checkbox" id="arrar5" name="gender" value="6">Insuficiencia cardiaca
-                                        <br>
-                                        <input class="che6" type="checkbox" id="arrar6" name="gender" value="4.25">Fibrilación aurricular
-                                        <br>
-                                        <input class="che7" type="checkbox" id="arrar7" name="gender" value="3.7">Arritmia
-                                        <br>
-                                        <input class="che8" type="checkbox" id="arrar8" name="gender" value="4.75">Sindrome de Marfan
-                                        <br>
-                                        <input class="che9" type="checkbox" id="arrar9" name="gender" value="4.35">Coartación de aorta
-                                        <br>
-                                        <input class="che10" type="checkbox" id="arrar10" name="gender" value="1.46">Enfermedad de kawasaki
-                                        </div>                                        
+                                        <div id="dynamic_pago" class="form-inline container-fluid" >
+                                            <div class="form-group ">
+                                                <select class="form-control form-control-lg  vp" id="p1" name="enfer[1]" required="required">
+                                                    <option value="">--Seleccione Enfermedad--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="input-group">
+                                            <button type="button" name="add" id="add" class="btn btn-success">Agregar enfermedad</button>
+                                        </div>                                 
                                         <br><br>
 
 										<h5 class="casos">Genero del paciente:</h5>
@@ -496,7 +486,7 @@
                                         </select>
                                         <br><br>
 
-
+                            
                                         <div class="oneMusic-buttons-area mb-100 align-items-center justify-content-center d-flex">
                                             <a href="#" onclick="holis();" class="btn oneMusic-btn m-2">Mostrar Resultados <i class="fa fa-angle-double-right"></i></a>
                                         </div>
@@ -566,6 +556,26 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <script>
+
+
+$(document).ready(function(){
+    agregarOpcion('p1');
+    var i=1;
+    $('#add').click(function(){
+        i++;
+        $('#dynamic_pago').append('<div id="row'+i+'" class="form-group"><br/><div class="form-group "><select class="form-control form-control-lg  vp" id="p'+i+'" name="enfer['+i+']" required="required"><option value="">Enfermedad</option></select></div><div class="input-group col-md-4"><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove col-md-4">X</button></div></div>');
+        agregarOpcion('p'+i);
+    });
+
+    $(document).on('click', '.btn_remove', function(){
+        var button_id = $(this).attr("id"); 
+        $('#row'+button_id+'').remove();
+    });
+    
+
+});
+</script>
 </body>
 
 </html>
