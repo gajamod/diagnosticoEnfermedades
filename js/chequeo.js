@@ -15,6 +15,26 @@ const matsintomas=[];
  matsintomas[7]=[0.15,1.6,1,0.3,0,0.3,0.2,0.6,0,0,0.1,0.2,0.25,0.15,0.5];
  matsintomas[8]=[0.15,1.6,1,0.15,0.3,0.15,0.1,0.6,0.15,0,0.15,0.2,0.25,0.1,0.3];
  matsintomas[9]=[0.15,0.16,0.2,0,0,0,0,0.05,0,0,0,0,0.25,0,0];
+const valSintomas=[];
+valSintomas[0]=[];
+valSintomas[0]['nombre']='acne';//Sintoma 1 (0)
+valSintomas[0]['opciones']=[];
+valSintomas[0]['opciones'][0]=[];
+valSintomas[0]['opciones'][0]['text']='nada';
+valSintomas[0]['opciones'][0]['val']=0;
+valSintomas[0]['opciones'][1]=[];
+valSintomas[0]['opciones'][1]['text']='poco';
+valSintomas[0]['opciones'][1]['val']=0.5;
+valSintomas[1]=[];
+valSintomas[1]['nombre']="Comezon";//Sintoma 2 (1)
+valSintomas[1]['opciones']=[];
+valSintomas[1]['opciones'][0]=[];
+valSintomas[1]['opciones'][0]['text']='nada';
+valSintomas[1]['opciones'][0]['val']=0;
+valSintomas[1]['opciones'][1]=[];
+valSintomas[1]['opciones'][1]['text']='poco';
+valSintomas[1]['opciones'][1]['val']=0.5;
+
 
 
 function agregarOpcion(id){
@@ -23,6 +43,20 @@ function agregarOpcion(id){
     }
 }
 
+
+function addOpcion(ids,arropc) {
+    for (var j in arropc) {
+         $('#'+ids).append('<option value="'+arropc[j]['val']+'" class="val">'+arropc[j]['text']+'</option>')
+    }
+}
+
+function selectSintomas(id){
+    for (var k in valSintomas) {
+         $('#'+id).append('<h5 class="casos">'+valSintomas[k]['nombre']+':</h5><select class="selec" id="sintom['+k+']"></select><br><br>');
+         console.log(valSintomas[k]['opciones']);
+         addOpcion('sintom['+k+']',valSintomas[k]['opciones']);
+    }
+}
 function compare(array1,array2){
     //const arr1= [5,5,6];
     //const arr2= [3,7,4];
