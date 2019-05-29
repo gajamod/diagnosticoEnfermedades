@@ -1,4 +1,4 @@
-var URLBASE='http://localhost/proyectoIA-master/';
+var URLBASE='http://localhost/diagnosticoEnfermedades/';
 const enfermedades=[];
 enfermedades[0]=[];
 enfermedades[0]['nombre']="uno";
