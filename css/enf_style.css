@@ -1,0 +1,14 @@
+.enfResult p{
+	font-size: 20px; 
+	margin-left: 10px; 
+	margin-right: 10px; 
+	text-align: justify;
+}
+
+.enfLista{
+	list-style-type:disc !important;
+	font-size: 18px;
+	margin-left: 60px; 
+	margin-right: 10px;
+	text-align: justify;
+}

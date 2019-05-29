@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Test</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <script src="js/chequeo.js"></script>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                        <!-- Nav brand -->
+                        <a href="index.html"><img src="img/core-img/logo2.png" alt="" style="height: 60px;"></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Inicio</a></li>
+                                    <li><a href="about.html">Conócenos</a></li>
+                                    <li><a href="test.html">Test</a></li>
+                                    <li><a href="enfermedades.html">Enfermedades</a></li>
+                                </ul>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/bg-1.jpg);">
+        <div class="bradcumbContent">
+            <p>Enfermedades Cardiovasculares</p>
+            <h2>Test de Síntomas</h2>
+        </div>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+
+
+    <!-- ##### Elements Area Start ##### -->
+    <section class="elements-area mt-30 section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-12">
+                    <div class="elements-title mb-70 text-center">
+                        <h2>Selección del tipo de Diagnóstico</h2>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-lg-12">
+                    <div class="oneMusic-tabs-content" style="border: 1px solid #cdcdcd;">
+                        
+                        <!--SELECCIÓN DEL TIPO DE DIAGNÓSTICO-->
+                        <div class="align-items-center justify-content-center d-flex">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" id="tab--1" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="false">Diagnóstico General</a>
+                                </li>                                
+                                <li class="nav-item">
+                                    <a class="nav-link" id="tab--2" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Diagnóstico Específico</a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+
+
+                        <!--MUESTRA DEL TIPO DE DIAGNÓSTICO-->
+                        <div class="tab-content mb-100" id="myTabContent">
+                            
+
+                            <!--DIAGNÓSTICO GENERAL-->
+                            <div class="tab-pane fade" id="tab1" role="tabpanel" aria-labelledby="tab--1">
+                                <div class="oneMusic-tab-content">
+                                    <!-- Contenido -->
+                                    <div class="oneMusic-tab-text">
+                                        
+                                        <!--<h5 class="casos">Genero del paciente:</h5>
+                                        <form action="" class="selec">
+                                                <input type="radio" name="gender" id="genero" value="0.15">Femenino
+                                                <input type="radio" name="gender" value="0.15">Masculino 
+                                        </form>
+                                        <br><br>-->
+                                        <h5 class="casos">Genero del paciente:</h5>
+                                        <select class="selec" id="generoPaciente">
+                                            <option value="0.15" class="val">Femenino</option>
+                                            <option value="0.15" class="val">Masculino</option>
+                                        </select>
+                                        <br><br>
+
+
+                                        <h5 class="casos">Edad del paciente</h5>
+                                        <select class="selec" id="edadPaciente">
+                                            <option value="0.16" class="val">Menor o igual a 4 años</option>
+                                            <option value="1" class="val">Mayor a 4 años</option>
+                                        </select>
+                                        <br><br>
+                                        
+                                        <h5 class="casos">Peso del paciente (en kilogramos):</h5>
+                                        <select class="selec" id="pesoPaciente">
+                                            <option value="0.2" class="val">Menos de 30kg (niños)</option>
+                                            <option value="0.35" class="val">Entre 30 y 40kg</option>
+                                            <option value="0.45" class="val">Entre 40 y 50kg</option>
+                                            <option value="0.55" class="val">Entre 50 y 60kg</option>
+                                            <option value="0.65" class="val">Entre 60 y 70kg</option>
+                                            <option value="0.74" class="val">Entre 70 y 80kg</option>
+                                            <option value="0.85" class="val">Entre 80 y 90kg</option>
+                                            <option value="0.95" class="val">Entre 90 y 100kg</option>
+                                            <option value="1" class="val">Más de 100kg</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Niveles de colesterol:</h5>
+                                        <select class="selec" id="nivelColesterol">
+                                            <option value="0" class="val">Se desconoce el tipo de colesterol</option>
+                                            <option value="0.15" class="val">Colesterol HDL:  40mg/dl</option>
+                                            <option value="0.6" class="val">Colesterol LDL: 100mg/dl</option>
+                                            <option value="0.45" class="val">Colesterol LDL:  70mg/dl</option>
+                                            <option value="0.3" class="val">Colesterol LDL:  50mg/dl</option>
+                                            <option value="0.4" class="val">Colesterol VLDL: 40mg/dl</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Niveles de acido urico en la sangre:</h5>
+                                        <select class="selec" id="nivelAcido">
+                                            <option value="0" class="val">1 a 3 mg/dL</option>
+                                            <option value="0" class="val">3 a 5 mg/dL</option>
+                                            <option value="0" class="val">5 a 7 mg/dL</option>
+                                            <option value="0.3" class="val">7 o más mg/dL</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Niveles de trigliceridos:</h5>
+                                        <select class="selec" id="nivelTrigliceridos">
+                                            <option value="0" class="val">Menor de 150 mg/dL</option>
+                                            <option value="0.15" class="val">150 a 199 mg/dL</option>
+                                            <option value="0.3" class="val">200 a 499 mg/dL</option>
+                                            <option value="0.45" class="val">Mayor de 500 mg/dL</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Presion sistólica:</h5>
+                                        <select class="selec" id="nivelPresionSistolica">
+                                            <option value="0" class="val"> 100 - 120</option>
+                                            <option value="0.5" class="val"> 120 - 129 </option>
+                                            <option value="0.1" class="val"> 130 - 139</option>
+                                            <option value="0.2" class="val"> 140 - 159</option>
+                                            <option value="0.27" class="val"> 160 - 179</option>
+                                            <option value="0.35" class="val"> 180 - ++ </option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Presion diastólica</h5>
+                                        <select class="selec" id="nivelPresionDiastolica">
+                                            <option value="0.05" class="val">60 - 80</option>
+                                            <option value="0.15" class="val">80 - 84</option>
+                                            <option value="0.3" class="val">85 - 89</option>
+                                            <option value="0.6" class="val">90 - 99</option>
+                                            <option value="0.85" class="val">100 - 109</option>
+                                            <option value="1" class="val">110 - ++</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Padece de algun tipo de estres:</h5>
+                                        <select class="selec" id="nivelEstres">
+                                            <option value="0.4" class="val">Estrés agudo</option>
+                                            <option value="0.35" class="val">Estrés agudo episódico</option>
+                                            <option value="0.2" class="val">Estrés crónico</option>
+                                            <option value="0" class="val">Estrés positivo</option>
+                                            <option value="0.15" class="val">Ditrés o estrés negativo</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Padese de desordenes alimenticios:</h5>
+                                        <select class="selec" id="nivelDesordenesAlimenticios">
+                                            <option value="0.1" class="val">Anorexia</option>
+                                            <option value="0.35" class="val">Bulimia</option>
+                                            <option value="0.2" class="val">Comer de manera compulsiva</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Consumo de sal en los alimentos a la semana:</h5>
+                                        <select class="selec" id="nivelConsumoSal">
+                                            <option value="0" class="val">No se le agrega a ningun tipo de comida</option>
+                                            <option value="0.1" class="val">Solo la sal necesaria para el platillo</option>
+                                            <option value="0.15" class="val">Saborizar los alimentos</option>
+                                            <option value="0.25" class="val">Se le agrega sal a cada platillo o botanas</option>
+                                            <option value="0.4" class="val">Consumo sal sola además de los alimentos</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Frecuencia con el que fumas a la semana:</h5>
+                                        <select class="selec" id="nivelFumar">
+                                            <option value="0" class="val">No fumo</option>
+                                            <option value="0.05" class="val">01 - 07 cigarrillos</option>
+                                            <option value="0.1" class="val">07 - 14 cigarrillos</option>
+                                            <option value="0.2" class="val">14 - 21 cigarrillos</option>
+                                            <option value="0.25" class="val">21 - 28 cigarrillos</option>
+                                            <option value="0.3" class="val">28 - 35 cigarrillos</option>
+                                            <option value="0.4" class="val">35 - 42 cigarrillos</option>
+                                            <option value="0.45" class="val">42 - 49 cigarrillos</option>
+                                            <option value="0.5" class="val">49 - 56 cigarrillos</option>
+                                            <option value="0.6" class="val">56 - 63 cigarrillos</option>
+                                            <option value="0.7" class="val">63 - más cigarrillos</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Frecuencia con el que se practica deportes a la semana:</h5>
+                                        <select class="selec" id="nivelDeportes">
+                                            <option value="0.25" class="val">No hago ejercicio</option>
+                                            <option value="0.1" class="val">01 - 02 horas</option>
+                                            <option value="0.05" class="val">02 - 04 horas</option>
+                                            <option value="0" class="val">04 - 06 horas</option>
+                                            <option value="0.1" class="val">06 - 08 horas</option>
+                                            <option value="0.25" class="val">08 - 10 horas</option>
+                                            <option value="0.3" class="val">10 - 12 horas</option>
+                                            <option value="0.4" class="val">12 - 14 horas</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Frecuencia con el que consumes bebidas alcoholicas:</h5>
+                                        <select class="selec" id="nivelAlcohol">
+                                            <option value="0" class="val">No consumo alcohol</option>
+                                            <option value="0.05" class="val">Una a dos veces a la semana</option>
+                                            <option value="0.1" class="val">Tres a cuatro veces a la semana</option>
+                                            <option value="0.15" class="val">Cuatro a cinco veces a la semana</option>
+                                            <option value="0.3" class="val">cinco a seis veces a la semana</option>
+                                            <option value="0.4" class="val">Diario</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Molestias en extremidades:</h5>
+                                        <select class="selec" id="nivelMolestias">
+                                            <option value="0" class="val">Ninguna</option>
+                                            <option value="0.1" class="val">Brazo derecho</option>
+                                            <option value="0.3" class="val">Brazo izquierdo</option>
+                                            <option value="0.05" class="val">Pierna</option>
+                                            <option value="0.5" class="val">Pecho</option>
+                                        </select>
+                                        <br><br>
+
+
+                                        <div class="oneMusic-buttons-area mb-100 align-items-center justify-content-center d-flex">
+                                            <a href="#" onclick="compararTodos();" class="btn oneMusic-btn m-2">Mostrar Resultados <i class="fa fa-angle-double-right"></i></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                           
+
+                            <!--DIAGNÓSTICO ESPECÍFICO-->
+                            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab--2">
+                                <div class="oneMusic-tab-content">
+                                    <!-- Tab Text -->
+                                    <div class="oneMusic-tab-text">
+                                       
+
+                                     
+
+
+                                        <h5 class="casos">Enfermedad que se quiere comparar</h5>
+                                        <div class="check">
+                                        <input class="che1" type="checkbox" id="arrar1" name="gender" value="6.7">Tromboembolismo pulmonar
+                                        <br>
+                                        <input class="che2" type="checkbox" id="arrar2" name="gender" value="6.55">Sindrome de miocardio
+                                        <br>
+                                        <input class="che3" type="checkbox" id="arrar3" name="gender" value="6.75">Cardiopatía isquémica
+                                        <br>
+                                        <input class="che4" type="checkbox" id="arrar4" name="gender" value="5.8">Amiloidosis
+                                        <br>
+                                        <input class="che5" type="checkbox" id="arrar5" name="gender" value="6">Insuficiencia cardiaca
+                                        <br>
+                                        <input class="che6" type="checkbox" id="arrar6" name="gender" value="4.25">Fibrilación aurricular
+                                        <br>
+                                        <input class="che7" type="checkbox" id="arrar7" name="gender" value="3.7">Arritmia
+                                        <br>
+                                        <input class="che8" type="checkbox" id="arrar8" name="gender" value="4.75">Sindrome de Marfan
+                                        <br>
+                                        <input class="che9" type="checkbox" id="arrar9" name="gender" value="4.35">Coartación de aorta
+                                        <br>
+                                        <input class="che10" type="checkbox" id="arrar10" name="gender" value="1.46">Enfermedad de kawasaki
+                                        </div>                                        
+                                        <br><br>
+
+										<h5 class="casos">Genero del paciente:</h5>
+                                        <select class="selec" id="generoPaciente">
+                                            <option value="0.15" class="val">Femenino</option>
+                                            <option value="0.15" class="val">Masculino</option>
+                                        </select>
+                                        <br><br>
+
+
+                                        <h5 class="casos">Edad del paciente</h5>
+                                        <select class="selec" id="edadPaciente">
+                                            <option value="0.16" class="val">Menor o igual a 4 años</option>
+                                            <option value="1" class="val">Mayor a 4 años</option>
+                                        </select>
+                                        <br><br>
+                                        
+                                        <h5 class="casos">Peso del paciente (en kilogramos):</h5>
+                                        <select class="selec" id="pesoPaciente">
+                                            <option value="0.2" class="val">Menos de 30kg (niños)</option>
+                                            <option value="0.35" class="val">Entre 30 y 40kg</option>
+                                            <option value="0.45" class="val">Entre 40 y 50kg</option>
+                                            <option value="0.55" class="val">Entre 50 y 60kg</option>
+                                            <option value="0.65" class="val">Entre 60 y 70kg</option>
+                                            <option value="0.74" class="val">Entre 70 y 80kg</option>
+                                            <option value="0.85" class="val">Entre 80 y 90kg</option>
+                                            <option value="0.95" class="val">Entre 90 y 100kg</option>
+                                            <option value="1" class="val">Más de 100kg</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Niveles de colesterol:</h5>
+                                        <select class="selec" id="nivelColesterol">
+                                            <option value="0" class="val">Se desconoce el tipo de colesterol</option>
+                                            <option value="0.15" class="val">Colesterol HDL:  40mg/dl</option>
+                                            <option value="0.6" class="val">Colesterol LDL: 100mg/dl</option>
+                                            <option value="0.45" class="val">Colesterol LDL:  70mg/dl</option>
+                                            <option value="0.3" class="val">Colesterol LDL:  50mg/dl</option>
+                                            <option value="0.4" class="val">Colesterol VLDL: 40mg/dl</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Niveles de acido urico en la sangre:</h5>
+                                        <select class="selec" id="nivelAcido">
+                                            <option value="0" class="val">1 a 3 mg/dL</option>
+                                            <option value="0" class="val">3 a 5 mg/dL</option>
+                                            <option value="0" class="val">5 a 7 mg/dL</option>
+                                            <option value="0.3" class="val">7 o más mg/dL</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Niveles de trigliceridos:</h5>
+                                        <select class="selec" id="nivelTrigliceridos">
+                                            <option value="0" class="val">Menor de 150 mg/dL</option>
+                                            <option value="0.15" class="val">150 a 199 mg/dL</option>
+                                            <option value="0.3" class="val">200 a 499 mg/dL</option>
+                                            <option value="0.45" class="val">Mayor de 500 mg/dL</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Presion sistólica:</h5>
+                                        <select class="selec" id="nivelPresionSistolica">
+                                            <option value="0" class="val"> 100 - 120</option>
+                                            <option value="0.5" class="val"> 120 - 129 </option>
+                                            <option value="0.1" class="val"> 130 - 139</option>
+                                            <option value="0.2" class="val"> 140 - 159</option>
+                                            <option value="0.27" class="val"> 160 - 179</option>
+                                            <option value="0.35" class="val"> 180 - ++ </option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Presion diastólica</h5>
+                                        <select class="selec" id="nivelPresionDiastolica">
+                                            <option value="0.05" class="val">60 - 80</option>
+                                            <option value="0.15" class="val">80 - 84</option>
+                                            <option value="0.3" class="val">85 - 89</option>
+                                            <option value="0.6" class="val">90 - 99</option>
+                                            <option value="0.85" class="val">100 - 109</option>
+                                            <option value="1" class="val">110 - ++</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Padece de algun tipo de estres:</h5>
+                                        <select class="selec" id="nivelEstres">
+                                            <option value="0.4" class="val">Estrés agudo</option>
+                                            <option value="0.35" class="val">Estrés agudo episódico</option>
+                                            <option value="0.2" class="val">Estrés crónico</option>
+                                            <option value="0" class="val">Estrés positivo</option>
+                                            <option value="0.15" class="val">Ditrés o estrés negativo</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Padese de desordenes alimenticios:</h5>
+                                        <select class="selec" id="nivelDesordenesAlimenticios">
+                                            <option value="0.1" class="val">Anorexia</option>
+                                            <option value="0.35" class="val">Bulimia</option>
+                                            <option value="0.2" class="val">Comer de manera compulsiva</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Consumo de sal en los alimentos a la semana:</h5>
+                                        <select class="selec" id="nivelConsumoSal">
+                                            <option value="0" class="val">No se le agrega a ningun tipo de comida</option>
+                                            <option value="0.1" class="val">Solo la sal necesaria para el platillo</option>
+                                            <option value="0.15" class="val">Saborizar los alimentos</option>
+                                            <option value="0.25" class="val">Se le agrega sal a cada platillo o botanas</option>
+                                            <option value="0.4" class="val">Consumo sal sola además de los alimentos</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Frecuencia con el que fumas a la semana:</h5>
+                                        <select class="selec" id="nivelFumar">
+                                            <option value="0" class="val">No fumo</option>
+                                            <option value="0.05" class="val">01 - 07 cigarrillos</option>
+                                            <option value="0.1" class="val">07 - 14 cigarrillos</option>
+                                            <option value="0.2" class="val">14 - 21 cigarrillos</option>
+                                            <option value="0.25" class="val">21 - 28 cigarrillos</option>
+                                            <option value="0.3" class="val">28 - 35 cigarrillos</option>
+                                            <option value="0.4" class="val">35 - 42 cigarrillos</option>
+                                            <option value="0.45" class="val">42 - 49 cigarrillos</option>
+                                            <option value="0.5" class="val">49 - 56 cigarrillos</option>
+                                            <option value="0.6" class="val">56 - 63 cigarrillos</option>
+                                            <option value="0.7" class="val">63 - más cigarrillos</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Frecuencia con el que se practica deportes a la semana:</h5>
+                                        <select class="selec" id="nivelDeportes">
+                                            <option value="0.25" class="val">No hago ejercicio</option>
+                                            <option value="0.1" class="val">01 - 02 horas</option>
+                                            <option value="0.05" class="val">02 - 04 horas</option>
+                                            <option value="0" class="val">04 - 06 horas</option>
+                                            <option value="0.1" class="val">06 - 08 horas</option>
+                                            <option value="0.25" class="val">08 - 10 horas</option>
+                                            <option value="0.3" class="val">10 - 12 horas</option>
+                                            <option value="0.4" class="val">12 - 14 horas</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Frecuencia con el que consumes bebidas alcoholicas:</h5>
+                                        <select class="selec" id="nivelAlcohol">
+                                            <option value="0" class="val">No consumo alcohol</option>
+                                            <option value="0.05" class="val">Una a dos veces a la semana</option>
+                                            <option value="0.1" class="val">Tres a cuatro veces a la semana</option>
+                                            <option value="0.15" class="val">Cuatro a cinco veces a la semana</option>
+                                            <option value="0.3" class="val">cinco a seis veces a la semana</option>
+                                            <option value="0.4" class="val">Diario</option>
+                                        </select>
+                                        <br><br>
+
+                                        <h5 class="casos">Molestias en extremidades:</h5>
+                                        <select class="selec" id="nivelMolestias">
+                                            <option value="0" class="val">Ninguna</option>
+                                            <option value="0.1" class="val">Brazo derecho</option>
+                                            <option value="0.3" class="val">Brazo izquierdo</option>
+                                            <option value="0.05" class="val">Pierna</option>
+                                            <option value="0.5" class="val">Pecho</option>
+                                        </select>
+                                        <br><br>
+
+
+                                        <div class="oneMusic-buttons-area mb-100 align-items-center justify-content-center d-flex">
+                                            <a href="#" onclick="holis();" class="btn oneMusic-btn m-2">Mostrar Resultados <i class="fa fa-angle-double-right"></i></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!--BOTÓN PARA VOLVER A EMPEZAR-->
+                <div class="col-12 col-lg-12">
+                    <div class="oneMusic-buttons-area mb-100 align-items-center justify-content-center d-flex">
+                        <a href="enfermedades.html" class="btn oneMusic-btn btn-2 m-2">
+                            Conocer más... 
+                            <i class="fa fa-angle-double-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                                
+            </div>
+        </div>
+    </section>
+    <!-- ***** Test Area End ***** -->
+
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-12 col-md-6">
+                    <a href="#"><img src="img/core-img/logo2.png" alt=""></a>
+                    <br><br>
+                    <p class="copywrite-text">Copyright &copy;2018 All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="about.html">Conócenos</a></li>
+                            <li><a href="test.html">Test</a></li>
+                            <li><a href="enfermedades.html">Enfermedades</a></li>
+                            <li><a href="">.</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+</body>
+
+</html>
